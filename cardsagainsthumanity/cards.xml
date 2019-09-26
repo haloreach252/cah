@@ -1,0 +1,68 @@
+﻿<!-- Template: <card color="white" pack="default" text=""/> -->
+
+<?xml version="1.0" encoding="utf-8" ?>
+<cards>
+  <white>
+    <card color="white" pack="default" text="Being on fire."/>
+    <card color="white" pack="default" text="Racism."/>
+    <card color="white" pack="default" text="Old-people smell."/>
+    <card color="white" pack="default" text="A micropenis."/>
+    <card color="white" pack="default" text="Women in yogurt commercials."/>
+    <card color="white" pack="default" text="Classist undertones."/>
+    <card color="white" pack="default" text="Not giving a shit about the Third World"/>
+    <card color="white" pack="default" text="Inserting a mason jar into my anus."/>
+    <card color="white" pack="default" text="Court-ordered rehab."/>
+    <card color="white" pack="default" text="A windmill full of corpses."/>
+    <card color="white" pack="default" text="The gays."/>
+    <card color="white" pack="default" text="An oversized lollipop."/>
+    <card color="white" pack="default" text="African children."/>
+    <card color="white" pack="default" text="An asymmetric boob job."/>
+    <card color="white" pack="default" text="Bingeing and purging."/>
+    <card color="white" pack="default" text="The hardworking Mexican."/>
+    <card color="white" pack="default" text="An Oedipus complex."/>
+    <card color="white" pack="default" text="A tiny horse."/>
+    <card color="white" pack="default" text="Boogers."/>
+    <card color="white" pack="default" text="Penis envy."/>
+    <card color="white" pack="default" text="Barack Obama."/>
+    <card color="white" pack="default" text="My humps."/>
+    <card color="white" pack="default" text="The Tempu-pedic Swedish sleep system."/>
+    <card color="white" pack="default" text="Scientology."/>
+    <card color="white" pack="default" text="Dry heaving."/>
+    <card color="white" pack="default" text="Skeletor"/>
+    <card color="white" pack="default" text="Darth Vader."/>
+    <card color="white" pack="default" text="Figgy pudding."/>
+    <card color="white" pack="default" text="Advice from a wise, old black man."/>
+    <card color="white" pack="default" text="Five-Dollar Footlongs."/>
+    <card color="white" pack="default" text="Elderly Japanese men."/>
+    <card color="white" pack="default" text="Free Samples."/>
+    <card color="white" pack="default" text="Estrogen."/>
+    <card color="white" pack="default" text="Sexual tension."/>
+    <card color="white" pack="default" text="Famine."/>
+    <card color="white" pack="default" text="A stray pube."/>
+    <card color="white" pack="default" text="Men."/>
+    <card color="white" pack="default" text="Heartwarming orphans."/>
+    <card color="white" pack="default" text="Chunks of dead hitchhiker."/>
+    <card color="white" pack="default" text="A bag of magic beans."/>
+    <card color="white" pack="default" text="Repression."/>
+    <card color="white" pack="default" text="Prancing."/>
+    <card color="white" pack="default" text="My relationship status."/>
+    <card color="white" pack="default" text="Overcompensation."/>
+    <card color="white" pack="default" text="Peeing a little bit."/>
+    <card color="white" pack="default" text="Pooping back and forth. Forever."/>
+    <card color="white" pack="default" text="A ball of earwar, semen, and toenail clippings."/>
+    <card color="white" pack="default" text="Testicular torsion."/>
+  </white>
+  <black>
+    <!-- When theres a line use 5 underscores -->
+    <card color="black" pack="default" text="How did I lose my virginity?"/>
+    <card color="black" pack="default" text="Why can't I sleep at night?"/>
+    <card color="black" pack="default" text="What's that smell?"/>
+    <card color="black" pack="default" text="I got 99 problems but _____ ain't one."/>
+    <card color="black" pack="default" text="Maybe she's born with it. Maybe it's _____."/>
+    <card color="black" pack="default" text="What's the next Happy Meal toy?"/>
+    <card color="black" pack="default" text="Here is the church. Here is the steeple. Open the doors and there is _____."/>
+    <card color="black" pack="default" text="It's a pity that kids these days are all getting involved with _____."/>
+    <card color="black" pack="default" text="Today on Maury: Help! My son is _____!"/>
+    <card color="black" pack="default" text="ALternative medicine is now embracing the curative powers of _____."/>
+  </black>
+</cards>
