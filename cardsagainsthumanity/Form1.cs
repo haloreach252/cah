@@ -37,7 +37,7 @@ namespace cardsagainsthumanity {
 			whiteCards = GetCards("white");
 			blackCards = GetCards("black");
 
-			whiteCardBox.Text = whiteCards[0];
+			SetWhiteCard(0, whiteCardBox);
 
 		}
 
@@ -53,11 +53,12 @@ namespace cardsagainsthumanity {
 			return data;
 		}
 
-		private void SetWhiteCard(int index) {
-
-
+		private void SetWhiteCard(int index, RichTextBox box) {
 			if (whiteCards[index] == null) index = 0;
-			if(whiteCards[index].Length >= 60) 
+			if (whiteCards[index].Length >= 60) box.SelectionFont = new Font("Arial", 14, FontStyle.Bold);
+			else box.SelectionFont = new Font("Arial", 18, FontStyle.Bold);
+
+			box.Text = whiteCards[index];
 		}
 	}
 }
