@@ -1,6 +1,5 @@
-﻿<!-- Template: <card color="white" pack="default" text=""/> -->
-
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!-- Template: <card color="white" pack="default" text=""/> -->
 <cards>
   <white>
     <card color="white" pack="default" text="Being on fire."/>
