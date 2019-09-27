@@ -24,7 +24,7 @@
 		/// </summary>
 		private void InitializeComponent() {
 			this.titleLabel = new System.Windows.Forms.Label();
-			this.whiteCardBox = new System.Windows.Forms.RichTextBox();
+			this.button1 = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
 			// titleLabel
@@ -38,25 +38,25 @@
 			this.titleLabel.TabIndex = 0;
 			this.titleLabel.Text = "Cards Against Humanity";
 			// 
-			// whiteCardBox
+			// button1
 			// 
-			this.whiteCardBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.whiteCardBox.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.whiteCardBox.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold);
-			this.whiteCardBox.Location = new System.Drawing.Point(15, 425);
-			this.whiteCardBox.Name = "whiteCardBox";
-			this.whiteCardBox.ReadOnly = true;
-			this.whiteCardBox.Size = new System.Drawing.Size(170, 220);
-			this.whiteCardBox.TabIndex = 1;
-			this.whiteCardBox.Text = "This is my test text how much can fit at this size";
+			this.button1.BackColor = System.Drawing.Color.Black;
+			this.button1.ForeColor = System.Drawing.Color.White;
+			this.button1.Location = new System.Drawing.Point(310, 77);
+			this.button1.Name = "button1";
+			this.button1.Size = new System.Drawing.Size(580, 220);
+			this.button1.TabIndex = 1;
+			this.button1.Text = "button1";
+			this.button1.UseVisualStyleBackColor = false;
+			this.button1.Click += new System.EventHandler(this.button1_Click);
 			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.Black;
-			this.ClientSize = new System.Drawing.Size(1184, 661);
-			this.Controls.Add(this.whiteCardBox);
+			this.ClientSize = new System.Drawing.Size(1309, 661);
+			this.Controls.Add(this.button1);
 			this.Controls.Add(this.titleLabel);
 			this.ForeColor = System.Drawing.Color.White;
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
@@ -71,7 +71,7 @@
 		#endregion
 
 		private System.Windows.Forms.Label titleLabel;
-		private System.Windows.Forms.RichTextBox whiteCardBox;
+		private System.Windows.Forms.Button button1;
 	}
 }
 
