@@ -19,7 +19,7 @@ namespace cardsagainsthumanity {
 
 		string path = AppDomain.CurrentDomain.BaseDirectory + @"\cards.xml";
 
-		private List<RichTextBox> whiteCardBoxes;
+		private Button[] whiteCardButtons;
 		private List<int> playedCards;
 
 		private Random rand = new Random();
@@ -37,7 +37,7 @@ namespace cardsagainsthumanity {
 		private void Form1_Load(object sender, EventArgs e) {
 			//if (Debugger.IsAttached) path = @"C:\Users\halor\source\repos\cardsagainsthumanity\cardsagainsthumanity\cards.xml";
 			//if (Debugger.IsAttached) path = @"H:\Coding\C#Projects\cah\cardsagainsthumanity\cards.xml";
-			if(Debugger.IsAttached) path = Path.GetDirectoryName(Path.GetDirectoryName(Directory.GetCurrentDirectory()));
+			if(Debugger.IsAttached) path = Path.GetDirectoryName(Path.GetDirectoryName(Directory.GetCurrentDirectory())) + @"\cards.xml";
 
 			// Centers the title label at the top middle regardless of display size
 			titleLabel.Top = 15;
@@ -48,8 +48,41 @@ namespace cardsagainsthumanity {
 
 			playedCards = new List<int>();
 
-			InitializeCards();
-			InitializeButtons();
+			Init();
+		}
+
+		private void Init() {
+			if (whiteCardButtons == null) whiteCardButtons = new Button[7];
+			Size s = new Size(170, 220);
+			Color fgColor = Color.Black;
+			Color bgColor = Color.White;
+			Color borderColor = Color.Black;
+			Color mouseOverColor = Color.FromArgb(255,240,240,240);
+			Color mouseDownColor = ControlPaint.Dark(mouseOverColor);
+
+			Point p = new Point(0, 0);
+
+			for (int i = 0; i < 7; i++) {
+				p = new Point((185 * i) + 15, 425);
+				Button b = new Button {
+					Location = p,
+					Size = s,
+					TabIndex = i,
+					ForeColor = fgColor,
+					BackColor = bgColor,
+					FlatStyle = FlatStyle.Standard,
+					Name = "whiteButton" + i,
+				};
+
+				b.FlatAppearance.BorderSize = 4;
+				b.FlatAppearance.MouseDownBackColor = mouseDownColor;
+				b.FlatAppearance.MouseOverBackColor = mouseOverColor;
+				b.Click += WhiteCardClick;
+
+				Controls.Add(b);
+				whiteCardButtons[i] = b;
+			}
+			foreach (Button b in whiteCardButtons) SetWhiteCard(rand.Next(whiteCards.Count), b);
 		}
 
 		private List<string> GetCards(string color) {
@@ -64,48 +97,7 @@ namespace cardsagainsthumanity {
 			return data;
 		}
 
-		private void InitializeCards() {
-			if (whiteCardBoxes == null) whiteCardBoxes = new List<RichTextBox>();
-			for (int i = 0; i < 8; i++) {
-				Point p = new Point((185 * (i-1)) + 15, 425); Size s = new Size(170, 220);
-				RichTextBox b = new RichTextBox {
-					Location = p, Size = s,
-					ReadOnly = true,
-					Font = normalSizeFont
-				};
-
-				Controls.Add(b);
-				whiteCardBoxes.Add(b);
-			}
-			foreach (RichTextBox b in whiteCardBoxes) SetWhiteCard(rand.Next(whiteCards.Count), b);
-		}
-
-		private void InitializeButtons() {
-			Size s = new Size(170, 220); Color c = Color.FromArgb(0,255,255,255);
-			for (int i = 0; i < 8; i++) {
-				Point p = new Point((185 * (i - 1)) + 15, 425);
-				Button button = new Button {
-					Location = p,
-					Size = s,
-					TabIndex = 0,
-					UseVisualStyleBackColor = true,
-					ForeColor = c,
-					BackColor = c,
-					FlatStyle = FlatStyle.Flat,
-					Name = "WHITE_BUTTON_" + i
-				};
-				button.FlatAppearance.BorderSize = 0;
-				button.FlatAppearance.MouseDownBackColor = c;
-				button.FlatAppearance.MouseOverBackColor = c;
-
-				button.Click += WhiteCardClick;
-				Controls.Add(button);
-
-				button.BringToFront();
-			}
-		}
-
-		private void SetWhiteCard(int whiteCardIndex, RichTextBox box) {
+		private void SetWhiteCard(int whiteCardIndex, Button box) {
 			if (whiteCards[whiteCardIndex] == null) whiteCardIndex = 0;
 			if (whiteCards[whiteCardIndex].Length >= cardTextLengthMod) box.Font = smallSizeFont;
 			else box.Font = normalSizeFont;
@@ -122,11 +114,11 @@ namespace cardsagainsthumanity {
 		}
 
 		private void WhiteCardClick(object sender, EventArgs e) {
-			MessageBox.Show("CLICKED A FUCKING BUTTON");
+			SetWhiteCard(rand.Next(whiteCards.Count), sender as Button);
 		}
 
 		private void button1_Click(object sender, EventArgs e) {
-			foreach (RichTextBox b in whiteCardBoxes) SetWhiteCard(rand.Next(whiteCards.Count), b);
+			foreach (Button b in whiteCardButtons) SetWhiteCard(rand.Next(whiteCards.Count), b);
 		}
 	}
 }
